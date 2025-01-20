@@ -41,27 +41,5 @@ Given an integer array `flowerbed` and an integer `n`, return `true` if it is po
 - There are no two adjacent flowers in the flowerbed.
 - `0 <= n <= flowerbed.length`
 
----
 
-## Solution in PHP
-
-### Code Implementation
-
-```php
-<?php
-
-class Solution {
-
-    /**
-     * Determines if `n` flowers can be planted in the given flowerbed.
-     *
-     * @param Int[] $flowerbed An array representing the flowerbed where 0 means empty and 1 means planted.
-     * @param Int $n The number of flowers to plant.
-     * @return Boolean True if `n` flowers can be planted, false otherwise.
-     */
-    function canPlaceFlowers($flowerbed, $n) {
-        $count = 0; // Keeps track of the number of flowers that can be planted
-        $length = count($flowerbed);
-
-        for ($i = 0; $i < $length; $i++) {
   
