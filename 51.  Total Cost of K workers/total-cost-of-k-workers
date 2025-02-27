@@ -1,0 +1,44 @@
+<?php
+
+class Solution {
+
+    /**
+     * @param Integer[] $costs
+     * @param Integer $k
+     * @param Integer $candidates
+     * @return Integer
+     */
+    function totalCost($costs, $k, $candidates) {
+        $totalCost=0;
+        $pq1=new SplMinHeap();
+        $pq2=new SplMinHeap();
+        $i=0;
+        $j=count($costs)-1;
+        while($k>0){
+            
+            while($pq1->count()<$candidates && $i <= $j){
+                $pq1->insert($costs[$i]);
+                $i++;
+            }
+            
+            while($pq2->count()<$candidates && $i <= $j){
+                $pq2->insert($costs[$j]);
+                $j--;
+            }
+
+            $c1=$pq1->count()?$pq1->top():PHP_INT_MAX;
+            $c2=$pq2->count()?$pq2->top():PHP_INT_MAX;
+
+            if($c1<=$c2){
+                $totalCost+=$c1;
+                $pq1->extract();
+            }else{
+                $totalCost+=$c2;
+                $pq2->extract();
+            }
+            $k--;
+        }
+
+        return $totalCost;
+    }
+}
