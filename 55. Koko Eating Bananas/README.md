@@ -1,34 +1,62 @@
-875. Koko Eating Bananas
-Solved
-Medium
-Topics
-Companies
-Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.
+# 875. Koko Eating Bananas
 
-Koko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.
+**Solved**  
+**Medium**  
 
-Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.
+## Topics
+- Binary Search  
+- Array  
+- Greedy  
 
-Return the minimum integer k such that she can eat all the bananas within h hours.
+## Companies
+- (Applicable companies, if any)
 
- 
+---
 
-Example 1:
+Koko loves to eat bananas. There are `n` piles of bananas, where the `i`th pile contains `piles[i]` bananas. The guards have gone and will return in `h` hours.
 
-Input: piles = [3,6,7,11], h = 8
-Output: 4
-Example 2:
+Koko can choose her eating speed, `k` (bananas per hour). Each hour, she picks a pile and eats `k` bananas from it. If a pile has fewer than `k` bananas, she eats all remaining bananas from that pile and does not eat more during that hour.
 
-Input: piles = [30,11,23,4,20], h = 5
-Output: 30
-Example 3:
+Koko prefers to eat slowly but must finish all the bananas before the guards return.
 
-Input: piles = [30,11,23,4,20], h = 6
-Output: 23
- 
+Return the minimum integer `k` such that she can eat all the bananas within `h` hours.
 
-Constraints:
+---
 
-1 <= piles.length <= 104
-piles.length <= h <= 109
-1 <= piles[i] <= 109
+## Example 1:
+**Input:**  
+```plaintext
+piles = [3,6,7,11], h = 8
+```
+**Output:**  
+```plaintext
+4
+```
+
+## Example 2:
+**Input:**  
+```plaintext
+piles = [30,11,23,4,20], h = 5
+```
+**Output:**  
+```plaintext
+30
+```
+
+## Example 3:
+**Input:**  
+```plaintext
+piles = [30,11,23,4,20], h = 6
+```
+**Output:**  
+```plaintext
+23
+```
+
+---
+
+## Constraints:
+- `1 <= piles.length <= 10^4`
+- `piles.length <= h <= 10^9`
+- `1 <= piles[i] <= 10^9`
+```
