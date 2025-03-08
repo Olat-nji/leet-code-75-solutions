@@ -43,7 +43,7 @@ nums = [2,7,9,3,1]
 - Skip house 4  
 - Rob house 5 (money = 1)  
 - Total amount stolen = **2 + 9 + 1 = 12**  
-
+ 
 ---
 
 ### Constraints:
